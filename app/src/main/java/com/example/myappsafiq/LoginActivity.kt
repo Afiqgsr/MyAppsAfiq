@@ -21,10 +21,13 @@ class LoginActivity : AppCompatActivity() {
         }
         val button = findViewById<Button>(R.id.LoginButton)
         val emailtext = findViewById<EditText>(R.id.emailText)
+        val passwordtext = findViewById<EditText>(R.id.editTextTextPassword)
         button.setOnClickListener{
             val intent = Intent(this, MainActivity::class.java)
             val email = emailtext.text.toString()
+            val password = passwordtext.text.toString()
             intent.putExtra("email", email)
+            intent.putExtra("password",password)
             startActivity(intent)
         }
     }

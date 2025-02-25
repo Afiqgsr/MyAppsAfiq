@@ -18,6 +18,8 @@ class MainActivity : AppCompatActivity() {
             insets
         }
         val emailString = intent.getStringExtra("email") ?: ""
+        val passwordString = intent.getStringExtra("password") ?: ""
         Log.d("email", emailString)
+        Log.d("password", passwordString)
     }
 }

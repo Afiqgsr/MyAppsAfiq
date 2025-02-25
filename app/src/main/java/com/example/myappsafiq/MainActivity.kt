@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         }
         val emailString = intent.getStringExtra("email") ?: ""
         val passwordString = intent.getStringExtra("password") ?: ""
+
         Log.d("email", emailString)
         Log.d("password", passwordString)
     }

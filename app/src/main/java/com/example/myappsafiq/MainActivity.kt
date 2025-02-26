@@ -2,6 +2,7 @@ package com.example.myappsafiq
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -17,10 +18,12 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val emailString = intent.getStringExtra("email") ?: ""
+        val emailString = intent.getStringExtra("email") ?: "Hello World"
         val passwordString = intent.getStringExtra("password") ?: ""
 
         Log.d("email", emailString)
         Log.d("password", passwordString)
+        val helloTextView = findViewById<TextView>(R.id.helloTextView)
+        helloTextView.text = "Selamat Datang, $emailString!"
     }
 }
